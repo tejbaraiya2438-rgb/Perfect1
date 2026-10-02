@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    >
+
+    <title>SOU 3D Disha</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!--
+        IMPORTANT:
+        OrbitControls internally imports "three".
+        This import map tells the browser where "three" is.
+    -->
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js"
+        }
+    }
+    </script>
+
+</head>
+
+
+<body>
+
+
+    <!-- LOADING SCREEN -->
+
+    <div id="loading">
+
+        <div class="loader"></div>
+
+        <div class="loading-text">
+            BUILDING SOU DIGITAL TWIN
+        </div>
+
+    </div>
+
+
+    <!-- 3D CANVAS -->
+
+    <div id="canvas-container"></div>
+
+
+    <!-- BRAND -->
+
+    <header class="brand">
+
+        <div class="brand-title">
+            SOU 3D DISHA
+        </div>
+
+        <div class="brand-subtitle">
+            SILVER OAK UNIVERSITY • DIGITAL TWIN
+        </div>
+
+    </header>
+
+
+    <!-- SEARCH -->
+
+    <div class="search-panel">
+
+        <div class="search-icon">
+            ⌕
+        </div>
+
+        <input
+            id="searchInput"
+            type="text"
+            placeholder="Search room, floor, wing..."
+            autocomplete="off"
+        >
+
+    </div>
+
+
+    <!-- STATUS -->
+
+    <div class="status-panel">
+
+        <div class="panel-label">
+            CAMPUS MODEL
+        </div>
+
+        <div class="status-row">
+            <span>LOCATION</span>
+            <strong>GOTA</strong>
+        </div>
+
+        <div class="status-row">
+            <span>WING</span>
+            <strong>EA / EB</strong>
+        </div>
+
+        <div class="status-row">
+            <span>FLOORS</span>
+            <strong>01 — 10</strong>
+        </div>
+
+        <div class="status-row">
+            <span>MODE</span>
+            <strong>3D TWIN</strong>
+        </div>
+
+    </div>
+
+
+    <!-- LOCATION -->
+
+    <div class="location-card">
+
+        <div class="card-label">
+            SELECTED LOCATION
+        </div>
+
+        <div
+            id="locationTitle"
+            class="location-title"
+        >
+            EA / EB WING
+        </div>
+
+        <div
+            id="locationDescription"
+            class="location-description"
+        >
+            Interactive Silver Oak University
+            building model.
+        </div>
+
+        <div class="location-meta">
+
+            <span id="floorValue">
+                ALL FLOORS
+            </span>
+
+            <span id="roomValue">
+                CAMPUS
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <!-- CONTROLS -->
+
+    <div class="controls">
+
+        <button id="resetButton">
+            RESET
+        </button>
+
+        <button id="topButton">
+            TOP
+        </button>
+
+        <button id="explodeButton">
+            EXPLODE
+        </button>
+
+    </div>
+
+
+    <!-- HINT -->
+
+    <div class="interaction-hint">
+
+        DRAG TO ROTATE
+        &nbsp; • &nbsp;
+        PINCH TO ZOOM
+        &nbsp; • &nbsp;
+        TAP BUILDING
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script
+        type="module"
+        src="script.js"
+    ></script>
+
+
+</body>
+
+</html>
